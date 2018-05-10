@@ -1,7 +1,23 @@
 <div id="principal_bg">
 <h1 id="title">TASK MANAGER ANGULAR 6</h1>
 
-  <div>
+<div class="container" style="width: 30%">
+        <form class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <p class="input_title"><strong>User</strong></p>
+                <input type="text" id="inputEmail" class="login_box" placeholder="User or E-mail" required autofocus>
+                <p class="input_title"><strong>Password</strong></p>
+                <input type="password" id="inputPassword" class="login_box" placeholder="******" required>
+                <div id="remember" class="checkbox">
+                    <label>
+                        
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary" type="submit">Login</button>
+        </form>
+</div>
+
+<!--  <div>
     <p>
         <label for="">User: </label>
         <input type="text" name="user" placeholder="User" required>    
@@ -15,6 +31,4 @@
     <p>
         <input type="submit" value="Sig In"  [disabled]="!formCoche.form.valid">
     </p>
-  </div>
-  
-</div>
+  </div>-->
