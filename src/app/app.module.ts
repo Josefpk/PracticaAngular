@@ -10,6 +10,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { CalendarioComponent } from './calendario/calendario.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { TareasComponent } from './tareas/tareas.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PerfilComponent } from './perfil/perfil.component';
     LogoutComponent,
     ProyectosComponent,
     CalendarioComponent,
-    PerfilComponent
+    PerfilComponent,
+    TareasComponent
   ],
   imports: [
     routing,

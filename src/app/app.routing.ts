@@ -12,6 +12,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { CalendarioComponent } from './calendario/calendario.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { TareasComponent } from './tareas/tareas.component';
 
 const appRoutes: Routes = [
     {path: 'principal', component: PrincipalComponent},
@@ -20,6 +21,7 @@ const appRoutes: Routes = [
     {path: 'calendario', component: CalendarioComponent},
     {path: 'perfil', component: PerfilComponent},
     {path: 'proyectos', component: ProyectosComponent},
+    {path: 'tareas', component: TareasComponent},
     {path: '**', component: PrincipalComponent}
 ];
 
