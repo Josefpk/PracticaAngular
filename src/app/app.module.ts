@@ -7,13 +7,19 @@ import { AppComponent } from './app.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { LoggedComponent} from './logged/logged.component';
 import { LogoutComponent } from './logout/logout.component';
+import { ProyectosComponent } from './proyectos/proyectos.component';
+import { CalendarioComponent } from './calendario/calendario.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipalComponent,
     LoggedComponent,
-    LogoutComponent
+    LogoutComponent,
+    ProyectosComponent,
+    CalendarioComponent,
+    PerfilComponent
   ],
   imports: [
     routing,

@@ -9,12 +9,18 @@ import { PrincipalComponent } from './principal/principal.component';
 import { LoggedComponent } from './logged/logged.component';
 import { AppComponent } from './app.component';
 import { LogoutComponent } from './logout/logout.component';
+import { ProyectosComponent } from './proyectos/proyectos.component';
+import { CalendarioComponent } from './calendario/calendario.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 const appRoutes: Routes = [
     {path: 'principal', component: PrincipalComponent},
     {path: 'logged', component: LoggedComponent},
-    {path: '**', component: PrincipalComponent},
-    {path: 'logout', component: PrincipalComponent}
+    {path: 'logout', component: PrincipalComponent},
+    {path: 'calendario', component: CalendarioComponent},
+    {path: 'perfil', component: PerfilComponent},
+    {path: 'proyectos', component: ProyectosComponent},
+    {path: '**', component: PrincipalComponent}
 ];
 
 export const appRoutingProviders: any[] = [];

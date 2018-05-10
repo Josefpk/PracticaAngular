@@ -3,16 +3,16 @@
 <div>
     <ul class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Proyects</a>
+          <a class="nav-link active" [routerLink]="['/proyectos']" [routerLinkActive]="['activado']">Proyects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Profile</a>
+          <a class="nav-link" [routerLink]="['/perfil']" [routerLinkActive]="['activado']">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Calendar</a>
+          <a class="nav-link" [routerLink]="['/calendario']" [routerLinkActive]="['activado']">Calendar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">LogOut</a>
+          <a class="nav-link disabled" [routerLink]="['/principal']" [routerLinkActive]="['activado']">LogOut</a>
         </li>
       </ul>
 </div>
