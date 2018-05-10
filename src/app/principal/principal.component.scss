@@ -1,0 +1,13 @@
+#principal_bg {
+    max-width: 100%;
+    height: 100vh;
+    background: url("/assets/images/vista.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#title{
+    text-align: center;
+    $font-family-sans-serif: "Segoe UI";
+}

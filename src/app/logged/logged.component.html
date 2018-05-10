@@ -1,0 +1,88 @@
+
+
+<div>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Proyects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Calendar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">LogOut</a>
+        </li>
+      </ul>
+</div>
+
+<div class="form-group">
+    <form #formLogged="ngForm" (ngSubmit)="onSubmit() ; formLogged.reset()">
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Nueva Tarea</label>
+            <div class="col-sm-10">
+              <input type="text" name="nombreTarea" #nombreTarea="ngModel" [(ngModel)]="logged.nombreTarea" class="form-control"  placeholder="New Task" required>
+              <span *ngIf="nombreTarea.touched && !nombreTarea.valid" style="color: red"> El nombre de la TAREA es incorrecto o vacio.</span>
+          </div>
+         
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Proyecto</label>
+              <div class="col-sm-10">
+                <input type="text" name="proyecto" #proyecto="ngModel" [(ngModel)]="logged.proyecto" class="form-control" placeholder="New Proyet" required>
+                <span *ngIf="proyecto.touched && !proyecto.valid" style="color: red"> Las caracteristicas del PROYECTO son incorrectas o vacias.</span>
+              </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Fecha Limite</label>
+            <div class="col-sm-10">
+              <input type="date" name="fechaLimite" #fechaLimite="ngModel" [(ngModel)]="logged.fechaLimite" class="form-control"  placeholder="Deadline" required >
+              <span *ngIf="fechaLimite.touched && !fechaLimite.valid" style="color: red"> La fecha indiada es erronea.</span>
+            </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Comentarios</label>
+            <div class="col-sm-10">
+              <input type="text" name="comentarios" #comentarios="ngModel" [(ngModel)]="logged.comentarios" class="form-control" class="form-control"  placeholder="Commentary">
+            </div>
+        </div>
+    <input type="submit" value="Agregar Tarea" [disabled]="!formLogged.form.valid">      
+             
+    </form>
+</div>
+
+<div>
+  <h3>LISTADO DE TAREAS</h3>
+
+  <table class="table">
+      <thead class="thead-dark">
+          <tr>
+              <th scope="col">#</th>
+              <th scope="col">NOMBRE TAREA</th>
+              <th scope="col">PROYECTO</th>
+              <th scope="col">FECHA</th>
+              <th scope="col">COMENTARIOS</th>
+              <th scope="col">ELIMINAR</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor = "let logged of loggeds; let i = index">
+              <td scope="row">{{i+1}}</td>
+              <td scope="row">{{logged.nombreTarea}}</td>
+              <td scope="row">{{logged.proyecto}}</td>
+              <td scope="row">{{logged.fechaLimite}}</td>
+              <td scope="row">{{logged.comentarios}}</td>
+              <td scope="row">
+                <button (click)="eliminarTarea(i)">Delete</button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+<div id="div1" class="rounded">
+  <img src="/assets/images/hacer.jpg">
+</div>
+
+
