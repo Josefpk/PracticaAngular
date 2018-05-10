@@ -15,8 +15,8 @@ export class LoggedComponent implements OnInit {
   constructor() {
     this.logged = new Logged("", "", new Date(),"");
     this.loggeds = [
-      new Logged("Reunion Jose", "Capacitacion", "2018-01-12", "Explanition GIT"),
-      new Logged("Reunion Exito", "Lidel de Proyecto", "2018-04-30", "Explanition SASS")
+      new Logged("Reunion Jose", "Capacitacion", new Date(), "Explanition GIT"),
+      new Logged("Reunion Exito", "Lidel de Proyecto", new Date(), "Explanition SASS")
     ]
   }
 
@@ -25,6 +25,7 @@ export class LoggedComponent implements OnInit {
 
   onSubmit () {
     //localStorage.setItem("task", JSON.stringify([{name: "name1", pass: "pass1"}, {name: "name2", pass: "pass2"}])); //localstorage carlos
+    this.logged.fechaLimite = new Date(this.logged.fechaLimite);
     this.loggeds.push(this.logged);
     this.logged = new Logged("","", new Date(),"");
   }
